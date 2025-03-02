@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>科技感按鈕網頁</title>
+<style>
+    body {
+        background-color: #0e0e0e;
+        color: #fff;
+        font-family: Arial, sans-serif;
+        padding: 20px;
+    }
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .neon-button {
+        padding: 10px 30px;
+        font-size: 20px;
+        color: #fff;
+        background: none;
+        border: 2px solid #7b5b4e;
+        border-radius: 8px;
+        position: relative;
+        cursor: pointer;
+        transition: 0.3s;
+        overflow: hidden;
+        margin: 10px;
+    }
+    .neon-button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg, transparent, #7b5b4e, transparent);
+        animation: glow 2s infinite;
+    }
+    @keyframes glow {
+        0% { transform: translateX(-100%); }
+        100% { transform: translateX(100%); }
+    }
+    .neon-button:hover {
+        background-color: #7b5b4e;
+        box-shadow: 0 0 10px #7b5b4e, 0 0 20px #7b5b4e;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>歡迎來到ccirc教材網站</h1>
+    <p>這是一個充滿程式設計的教材區，沉浸在資訊的海洋吧！</p>
+    <a href="https://www.youtube.com/watch?v=RZHi6agHUcQ" target="_blank" class="neon-button">動態規劃</a>
+    <a href="https://www.youtube.com/watch?v=RZHi6agHUcQ" target="_blank" class="neon-button">基礎教學</a>
+    <a href="https://www.youtube.com/watch?v=RZHi6agHUcQ" target="_blank" class="neon-button">位元運算</a>
+</div>
+</body>
+</html>
